@@ -8,7 +8,20 @@ This is my implementation of the Finance app for Harvard CS50x's PS9. This web a
 * /logout
 
 ## Description
-This web app allows users to trade stocks (with fake money). This app allows for multiple users which are created through registration and each user starts wih a cash balance of $10,000. User can look up the current price of shares for a specific stock (quote), buy shares, and sell shares. The user can also view their transaction history as well as view their portfolio which gives a summary of their owned stocks and their current value, how much cash the user possesses, and the total balance (shares and cash combined). The app also handles user input validation and appropriately redirects users to an error page if something goes wrong and gives the user a description of the problem. There is also implementation of Flask's flashes throughout the app to give user feedback as they interact with the app. For example, when a new user registers for the first time, a welcome flash is displayed after logging in, but for existing users logging in, they get a welcome back flash. Appropriate flashes also occur when users buy and sell stocks. Additionally, users are able to reset their password.
+This web app allows users to trade stocks (with fake money). Here's a list of the actions users can take:
+* Register new users (each new user starts with a cash balance of $10,000)
+* View portfolio, which is a summary of the user's owned stocks, the stocks' current value, how much cash the user possesses, and the user's total balance (shares and cash combined)
+* Look up current price if shares for a specific stock (quote)
+* Buy shares
+* Sell shares
+* View transaction history
+* Reset password
+
+The following is a list of some of the features of the app:
+* Handles user input validation and appropriately redirects users to an error page with a description of what went wrong and why
+  * For example, if the user does not have enough cash to purchase their wanted number of shares of a stock, the transaction will not go through and the user is redirected to the error page stating that the user does not have enough balance
+* Flask flashes throughout the app to give user feedback as they interact with the app
+  * For example, when a new user registers for the first time, a welcome flash is displayed after registration, but for existing users, after logging in, they are greeted with a welcome back flash. Flashes also occur after users successfully buy and sell stocks
 
 ## Dependencies
 All dependencies for this web app are listed in `requirements.txt`.\
